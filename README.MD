@@ -75,7 +75,7 @@ function edStimulate(emotion, amount) {
 }
 ```
 
-It's like almost like the decay function, except it adds a certain value and limits the highest possible value of the emotion to `1.0`. `edOpposites` in the `edStimulate` function contains the opposite names of every emotion:
+It's almost like the decay function, except it adds a certain value and limits the highest possible value of the emotion to `1.0`. `edOpposites` in the `edStimulate` function contains the opposite names of every emotion:
 ```javascript
   var edOpposites = {
     joy: "sadness",
