@@ -62,7 +62,7 @@ function edDecay(emotion) {
 
 Cool, so far our emotions will regulate over time, moving back to a neutral position of `0.0`.
 
-## Step 3: Stimulating
+### Step 3: Stimulating
 We should of course be able to stimulate emotions. Certain events can increase a certain emotion by a certain amount. The amount that it's increased by must, again, be a value between `0.0` and `1.0`. If we stimulate anger by `0.05`, that means we must stimulate `20` times to get full anger (= rage on the wheel of Plutchik). Keep this in mind to know how much to pass to the stimulate function.
 
 Meet your stimulation function:
@@ -99,7 +99,7 @@ Okay so, what does this mean? Consider I have a sadness of `1.0` and I receive a
 
 `edStimulateOpposite` is an important function because it balances out the opposite of an emotion when that emotion is stimulated. The value that is added to one emotion is simply subtracted from its polar opposite.
 
-## Step 4 (Optional): Derived emotions
+### Step 4 (Optional): Derived emotions
 Now you technically should already have a working implementation with either 4 or 8 primary emotions. But, there are 8 extra emotions that can be calculated based on the existing 8. Note that you can't do the following unless you implemented all 8 and not just 4.
 
 Going back to our regulate function, we can add something that calculates 8 extra emotions that are derived based on the existing 8:
@@ -145,7 +145,7 @@ If I have `1.0` joy but `0.0` trust, `1.0 * 0.0 makes 0.0`, so there is no love.
 These derived emotions are part of `edState` (your emotion state) but should never be stimulated directly. They are calculated based on the existing emotions and can provide extra granularity.
 
 ## Applications
-There are many possible applications I could think of, but one of them that I will be testing EmotionDrive in is games.
+There are many possible applications I could think of, but I'll be testing it in a game to see how it works out.
 
 It can be used to make simulated game AI react to the environment. Say an enemy gets attacked often, its anger goes up using our stimulate functions. It starts behaving differently when the anger is above `0.5`, becoming more agressive.
 
